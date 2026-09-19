@@ -10,7 +10,7 @@ export default function Contact() {
     const data = new FormData(e.currentTarget);
     const name = String(data.get("name") || "");
     const message = String(data.get("message") || "");
-    const subject = encodeURIComponent(`Showroom enquiry from ${name || "website"}`);
+    const subject = encodeURIComponent(`Enquiry from ${name || "website"}`);
     const body = encodeURIComponent(message);
     window.location.href = `mailto:?subject=${subject}&body=${body}`;
     setSent(true);
@@ -24,11 +24,11 @@ export default function Contact() {
             Contact
           </p>
           <h2 className="display mt-2 text-5xl tracking-wide md:text-6xl">
-            Let&apos;s shoot your floor.
+            Let&apos;s talk.
           </h2>
           <p className="mt-5 max-w-md text-[var(--muted)]">
-            Planning a launch, refresh, or content pack for the showroom? Reach
-            out — or message directly on Instagram.
+            Want to work together or review the full set? Message on Instagram
+            or send a note below.
           </p>
           <a
             href="https://www.instagram.com/stories.by.adithyakumar/"
@@ -52,7 +52,7 @@ export default function Contact() {
             />
           </label>
           <label className="mt-4 block text-sm text-[var(--muted)]">
-            Showroom / brand
+            Company / project
             <input
               name="brand"
               className="mt-2 w-full rounded-xl border border-[var(--line)] bg-[var(--bg)] px-4 py-3 text-[var(--ink)] outline-none focus:border-[var(--accent)]"

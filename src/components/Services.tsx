@@ -1,19 +1,19 @@
 const items = [
   {
-    title: "Showroom films",
-    body: "Short cinematic pieces that sell the floor — lighting, movement, and reveal cuts made for screens in-store and online.",
+    title: "Photography",
+    body: "Portraits, product, and moments that hold up on a big screen — clean light, strong composition, intentional color.",
   },
   {
-    title: "Bike & product stills",
-    body: "Hero angles, detail crops, and lifestyle frames that make metal look expensive and ready to ride.",
+    title: "Videography",
+    body: "Short films and reels with pacing that feels premium — from quiet detail cuts to high-energy event coverage.",
   },
   {
-    title: "Launch coverage",
-    body: "Event day photography and quick-turn reels for social — the energy of the reveal, not just the machine.",
+    title: "Events & stage",
+    body: "Shows, launches, and live performances captured with clarity — faces, atmosphere, and the beat of the room.",
   },
   {
     title: "Brand stories",
-    body: "Owner interviews, team portraits, and narrative edits that position the dealership as more than a parking lot.",
+    body: "Narrative edits and stills that help a business look sharp to partners, customers, and showroom floors alike.",
   },
 ];
 
@@ -24,7 +24,7 @@ export default function Services() {
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--accent)]">
           Services
         </p>
-        <h2 className="display mt-2 text-5xl tracking-wide md:text-6xl">What I shoot</h2>
+        <h2 className="display mt-2 text-5xl tracking-wide md:text-6xl">What he shoots</h2>
         <div className="mt-12 grid gap-5 md:grid-cols-2">
           {items.map((item) => (
             <article

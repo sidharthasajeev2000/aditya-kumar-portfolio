@@ -14,14 +14,13 @@ export default function Hero() {
             Photographer · Videographer
           </p>
           <h1 className="display text-6xl leading-[0.92] tracking-wide text-[var(--ink)] sm:text-7xl md:text-8xl">
-            Stories that
+            Frames with
             <br />
-            move like machines.
+            weight and pace.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--muted)]">
-            Cinematic stills and films for brands that live on the road — bike
-            showrooms, launches, and product stories that feel premium, sharp,
-            and unforgettable.
+            Selected photography and film by Aditya Kumar — portraits, events,
+            and cinematic cuts. Built to show brands what he can deliver.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
@@ -41,13 +40,13 @@ export default function Hero() {
           </div>
         </div>
         <div className="rounded-3xl border border-[var(--line)] bg-[var(--steel)]/60 p-6 backdrop-blur">
-          <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Built for</p>
-          <p className="display mt-2 text-4xl tracking-wide text-[var(--ink)]">Bike showrooms</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Craft</p>
+          <p className="display mt-2 text-4xl tracking-wide text-[var(--ink)]">Photo &amp; film</p>
           <ul className="mt-5 space-y-3 text-sm text-[var(--muted)]">
-            <li className="flex gap-2"><span className="text-[var(--accent)]">▸</span> Hero product films &amp; reels</li>
-            <li className="flex gap-2"><span className="text-[var(--accent)]">▸</span> Showroom atmosphere photography</li>
-            <li className="flex gap-2"><span className="text-[var(--accent)]">▸</span> Launch-day coverage &amp; social cuts</li>
-            <li className="flex gap-2"><span className="text-[var(--accent)]">▸</span> Owner &amp; brand story interviews</li>
+            <li className="flex gap-2"><span className="text-[var(--accent)]">▸</span> Portrait &amp; lifestyle stills</li>
+            <li className="flex gap-2"><span className="text-[var(--accent)]">▸</span> Event &amp; stage coverage</li>
+            <li className="flex gap-2"><span className="text-[var(--accent)]">▸</span> Short films &amp; social reels</li>
+            <li className="flex gap-2"><span className="text-[var(--accent)]">▸</span> Brand storytelling edits</li>
           </ul>
         </div>
       </div>

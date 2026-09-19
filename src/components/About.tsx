@@ -8,14 +8,13 @@ export default function About() {
           </p>
           <h2 className="display mt-2 text-5xl tracking-wide md:text-6xl">Aditya Kumar</h2>
           <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
-            Photographer and videographer crafting visual stories with pace and
-            polish. From quiet product frames to high-energy cuts, the goal is
-            simple: make the brand feel inevitable.
+            Photographer and videographer focused on images with presence —
+            whether it&apos;s a quiet portrait, a crowded stage, or a cut that
+            moves.
           </p>
           <p className="mt-4 text-base leading-relaxed text-[var(--muted)]">
-            For bike showrooms, that means treating every model like a lead
-            character — light, motion, and detail that convert browsers into
-            riders.
+            This site gathers his work so clients can see the craft clearly:
+            composition, light, and storytelling that hold up under scrutiny.
           </p>
         </div>
         <div className="rounded-3xl border border-[var(--line)] bg-gradient-to-br from-[#1c1710] to-[#12151c] p-8">

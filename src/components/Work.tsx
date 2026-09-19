@@ -1,3 +1,5 @@
+const base = "/aditya-kumar-portfolio";
+
 const videos = [
   {
     id: "paHmJ7OC9lI",
@@ -17,12 +19,54 @@ const videos = [
 ];
 
 const stills = [
-  { title: "Metal & light", caption: "Product detail · Reflective surfaces" },
-  { title: "Motion blur", caption: "Speed · Street · Night rides" },
-  { title: "Showroom calm", caption: "Floor presence · Clean geometry" },
-  { title: "Launch energy", caption: "Crowd · Reveal · Reaction" },
-  { title: "Rider portrait", caption: "Human story beside the machine" },
-  { title: "Detail study", caption: "Chrome · Badge · Texture" },
+  {
+    src: `${base}/gallery/ig-02.png`,
+    title: "Product light",
+    caption: "Watch · Green cinematic still",
+    span: "sm:col-span-2",
+  },
+  {
+    src: `${base}/gallery/ig-01.png`,
+    title: "Procession",
+    caption: "Temple · Crowd · Color",
+    span: "",
+  },
+  {
+    src: `${base}/gallery/ig-03.png`,
+    title: "Deity portrait",
+    caption: "Temple · Quiet frame",
+    span: "",
+  },
+  {
+    src: `${base}/gallery/ig-04.png`,
+    title: "Festival night",
+    caption: "Event · Illuminated stage",
+    span: "sm:col-span-2",
+  },
+  {
+    src: `${base}/gallery/ig-05.png`,
+    title: "Performer",
+    caption: "Color · Costume · Motion",
+    span: "",
+  },
+  {
+    src: `${base}/gallery/ig-06.png`,
+    title: "Ceremony",
+    caption: "Culture · Wide storytelling",
+    span: "",
+  },
+  {
+    src: `${base}/gallery/ig-07.png`,
+    title: "Floral detail",
+    caption: "Texture · Soft focus",
+    span: "",
+  },
+  {
+    src: `${base}/gallery/ig-08.png`,
+    title: "Temple lamps",
+    caption: "Atmosphere · Warm light",
+    span: "sm:col-span-2",
+  },
 ];
 
 export default function Work() {
@@ -37,7 +81,7 @@ export default function Work() {
             <h2 className="display mt-2 text-5xl tracking-wide md:text-6xl">Film &amp; frame</h2>
           </div>
           <p className="max-w-md text-sm leading-relaxed text-[var(--muted)]">
-            Photo and video live on{" "}
+            Still photography from{" "}
             <a
               className="text-[var(--ink)] underline decoration-[var(--accent)]/50 underline-offset-4 hover:decoration-[var(--accent)]"
               href="https://www.instagram.com/stories.by.adithyakumar/"
@@ -46,66 +90,69 @@ export default function Work() {
             >
               @stories.by.adithyakumar
             </a>
-            . Below: video craft samples and a lookbook grid for showroom-ready
-            aesthetics.
+            , plus video craft samples from YouTube.
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
-          {videos.map((v) => (
-            <article
-              key={v.id}
-              className="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--steel)]"
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {stills.map((s) => (
+            <figure
+              key={s.src}
+              className={`group relative overflow-hidden rounded-2xl border border-[var(--line)] bg-black ${s.span}`}
             >
-              <div className="aspect-video bg-black">
-                <iframe
-                  className="h-full w-full"
-                  src={`https://www.youtube.com/embed/${v.id}`}
-                  title={v.label}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
+              <div className="aspect-[4/5] w-full overflow-hidden sm:aspect-[3/4]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={s.src}
+                  alt={s.title}
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
                   loading="lazy"
                 />
               </div>
-              <div className="p-4">
-                <h3 className="font-semibold text-[var(--ink)]">{v.label}</h3>
-                <p className="mt-1 text-sm text-[var(--muted)]">{v.note}</p>
-              </div>
-            </article>
+              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-5 pt-16">
+                <h3 className="display text-3xl tracking-wide text-[var(--ink)]">{s.title}</h3>
+                <p className="mt-1 text-sm text-[var(--muted)]">{s.caption}</p>
+              </figcaption>
+            </figure>
           ))}
         </div>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {stills.map((s, i) => (
-            <div
-              key={s.title}
-              className="group relative min-h-52 overflow-hidden rounded-2xl border border-[var(--line)]"
-              style={{
-                background: `linear-gradient(145deg, hsl(${28 + i * 18} 18% ${12 + (i % 3) * 4}%), hsl(${210 + i * 8} 22% 10%))`,
-              }}
-            >
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(232,165,75,0.22),transparent_45%)]" />
-              <div className="absolute inset-0 opacity-40 mix-blend-overlay" style={{
-                backgroundImage:
-                  "repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255,255,255,0.03) 2px, rgba(255,255,255,0.03) 4px)",
-              }} />
-              <div className="absolute bottom-0 left-0 right-0 p-5">
-                <h3 className="display text-3xl tracking-wide text-[var(--ink)]">{s.title}</h3>
-                <p className="mt-1 text-sm text-[var(--muted)]">{s.caption}</p>
-              </div>
-            </div>
-          ))}
+        <div className="mt-14">
+          <h3 className="display mb-6 text-4xl tracking-wide">Video</h3>
+          <div className="grid gap-6 md:grid-cols-3">
+            {videos.map((v) => (
+              <article
+                key={v.id}
+                className="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--steel)]"
+              >
+                <div className="aspect-video bg-black">
+                  <iframe
+                    className="h-full w-full"
+                    src={`https://www.youtube.com/embed/${v.id}`}
+                    title={v.label}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-4">
+                  <h4 className="font-semibold text-[var(--ink)]">{v.label}</h4>
+                  <p className="mt-1 text-sm text-[var(--muted)]">{v.note}</p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
 
         <p className="mt-8 text-center text-sm text-[var(--muted)]">
-          Full photo set →{" "}
+          Full set →{" "}
           <a
             className="text-[var(--accent)] hover:underline"
             href="https://www.instagram.com/stories.by.adithyakumar/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Instagram gallery
+            Instagram
           </a>
           {" · "}
           More video →{" "}
