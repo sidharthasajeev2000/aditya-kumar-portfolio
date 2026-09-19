@@ -19,8 +19,8 @@ export default function Hero() {
             weight and pace.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--muted)]">
-            Selected photography and film by Aditya Kumar — portraits, events,
-            and cinematic cuts. Built to show brands what he can deliver.
+            Photos and films that sell the feeling — ready when your showroom
+            needs launch day, events, or brand films.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
